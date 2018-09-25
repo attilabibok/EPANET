@@ -219,3 +219,4 @@ temp/
 .project
 .cproject
 .pydevproject
+/.vs

@@ -143,6 +143,7 @@ void setdefaults(EN_Project *pr)
   time->Rstep = 3600;      /* 1 hr reporting period          */
   time->Rulestep = 0;      /* No pre-set rule time step      */
   time->Rstart = 0;        /* Start reporting at time 0      */
+  time->HTimeUser = 0;     /* User called step               */
   qu->TraceNode = 0;       /* No source tracing              */
   qu->BulkOrder = 1.0;     /* 1st-order bulk reaction rate   */
   qu->WallOrder = 1.0;     /* 1st-order wall reaction rate   */

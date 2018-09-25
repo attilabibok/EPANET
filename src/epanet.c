@@ -3117,6 +3117,10 @@ int DLLEXPORT EN_settimeparam(EN_Project *p, int code, long value)
   case EN_QTIME:
     qu->Qtime = value;
     break;
+	
+  case EN_TIMEUSER:
+	time->HTimeUser = value; //There could be a check for >0 && < time->dur
+	break;
 
   default:
     return (251);

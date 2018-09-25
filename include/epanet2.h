@@ -135,7 +135,8 @@ typedef enum {
   EN_QTIME        = 12,
   EN_HALTFLAG     = 13,
   EN_NEXTEVENT    = 14,
-  EN_NEXTEVENTIDX = 15
+  EN_NEXTEVENTIDX = 15,
+  EN_TIMEUSER     = 16
 } EN_TimeProperty;
 
 

@@ -727,6 +727,12 @@ long  timestep(EN_Project *pr)
   /* Normal time step is hydraulic time step */
   tstep = time->Hstep;
   
+  /* Revise time step based on user provided input */
+  t = time->HTimeUser - time->Htime;
+  if (t > 0 && t < tstep) {
+	  tstep = t;
+  }
+
   /* Revise time step based on time until next demand period */
   n = ((time->Htime + time->Pstart) / time->Pstep) + 1;   /* Next pattern period   */
   t = n * time->Pstep - time->Htime;              /* Time till next period */

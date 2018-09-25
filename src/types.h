@@ -596,7 +596,8 @@ typedef struct {
   Htime,                 /* Current hyd. time (sec)      */
   Hydstep,               /* Actual hydraulic time step   */
   Rulestep,              /* Rule evaluation time step    */
-  Dur;                   /* Duration of simulation (sec) */
+  Dur,                   /* Duration of simulation (sec) */
+  HTimeUser;             /* User called step (sec)       */
   
 } time_options_t;
 
