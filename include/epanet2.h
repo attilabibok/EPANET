@@ -1224,6 +1224,8 @@ extern "C" {
   int DLLEXPORT EN_addlink(EN_Project *p, char *id, EN_LinkType linkType, char *fromNode, char *toNode);
   int DLLEXPORT EN_deletenode(EN_Project *p, int nodeIndex);
   int DLLEXPORT EN_deletelink(EN_Project *p, int linkIndex);
+  int DLLEXPORT EN_addCheckpoint(EN_Project *p, long *currentTime);
+  int DLLEXPORT EN_backToCheckpoint(EN_Project *p, long checkpointTime);
   
   
   

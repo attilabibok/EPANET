@@ -847,6 +847,29 @@ typedef struct {
   
 } EN_Network;
 
+/* Checkpoint to where the hydraulics data is copied */
+typedef struct {
+	char
+		chkPointFlag;          /* If it exists*/
+
+	double
+		*NodeDemand,           /* Node actual demand           */
+		*EmitterFlows,         /* Emitter flows                */
+		*LinkSetting,          /* Link settings                */
+		*LinkFlows,            /* Link flows                   */
+		*NodeHead;             /* Nodal heads                  */
+
+	StatType
+		*LinkStatus,           /* Link status                  */
+		*OldStat;              /* Previous link/tank status    */
+
+	long
+		Htime,                 /* Current hyd. time (sec)      */
+		Hydstep;               /* Actual hydraulic time step   */
+
+	out_file_t out_file;       /* Out files to be copied        - this might be irrelevant, if results are not saved at all*/
+
+}checkpoint_t;
 
 /* project wrapper */
 struct EN_Project {
@@ -861,6 +884,8 @@ struct EN_Project {
   report_options_t report;
   out_file_t out_files;
   save_options_t save_options;
+
+  checkpoint_t checkpoint;
   
   double Ucf[MAXVAR];
   
@@ -874,5 +899,7 @@ struct EN_Project {
   void (* viewprog) (char *);     /* Pointer to progress viewing function */   
   
 };
+
+
 
 #endif

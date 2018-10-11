@@ -4911,4 +4911,22 @@ int DLLEXPORT EN_getruleID(EN_Project *pr, int indexRule, char *id) {
   return (0);
 }
 
+
+int DLLEXPORT EN_addCheckpoint(EN_Project *p, long *currentTime) {
+	//memcpy the corresponding fiels
+	return(0);
+}
+int DLLEXPORT EN_backToCheckpoint(EN_Project *p, long checkpointTime) {
+	//check if the checkpoint exists
+
+	//free up current data that is going to be rereferenced!!!!!!!
+
+	//rereference the network hydraulics
+	//rereference the saved hydraulics
+
+	//free up the checkpoint
+
+	//rewrite the actual timestep and time settings
+	return(0);
+}
 /*************************** END OF EPANET.C ***************************/
